@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %} Blog - Home {% endblock %}
+
+{% block content %}
+
+<h2>Estos son las entradas mas recientes</h2>
+{% for post in posts %}
+<h3>{{ post.title }}</h3>
+<div>Creado el: {{ post.created | date:"SHORT_DATE_FORMAT" }}</div>
+<div>Actualizado el: {{ post.modified | date:"SHORT_DATE_FORMAT" }}</div>
+<a href="{% url 'post' id=post.id %}"> Leer mas... </a>
+{% endfor %}
+
+{% endblock %}

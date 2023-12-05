@@ -6,7 +6,7 @@ from .models import Post
 
 def home(request):
     posts = Post.objects.all()
-    return render(request, "index.html", {"posts": posts})
+    return render(request, "home.html", {"posts": posts})
 
 
 def post(request, id):
