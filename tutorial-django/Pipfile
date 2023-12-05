@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 django = "*"
+python-dotenv = "*"
 
 [dev-packages]
 
@@ -15,3 +16,4 @@ python_version = "3.11"
 migrate = "python manage.py migrate"
 makemigrations = "python manage.py makemigrations"
 server = "python manage.py runserver"
+shell = "python manage.py shell"
